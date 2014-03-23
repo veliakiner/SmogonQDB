@@ -1,0 +1,46 @@
+<!DOCTYPE = html>
+
+<html>
+    <head>
+        <title>Quote database.</title>
+    </head>
+    <style type="text/css">
+        
+        body {
+            font-family: sans-serif;
+            width: 800px;
+            margin: 0 auto;
+            padding: 10 px;
+            }
+        hr {
+            margin: 20px auto;
+            }
+        .content+.content {
+            margin-top: 20px;
+            }
+        .content-subject {
+            font-weight: bold;
+            font-size: 20px;
+            }
+        .content-body {
+            margin 0;
+            font-size 17px;
+            }
+    </style>
+    <body>
+        <h1>Welcome to the QDB!</h1>
+    <hr>
+    <a href="/submit">Submit a quote</a>
+    <br>
+    <a href="/top">Top</a>
+    <br>
+    <a href="/random">Random</a>
+    <br>
+    <hr>
+    
+    {% for DBQuote in quotes %}
+
+    {% include 'singlequote.html' %}
+    {% endfor %}
+    <body>
+</html>

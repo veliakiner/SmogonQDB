@@ -1,0 +1,52 @@
+<!DOCTYPE = html>
+
+<html>
+    <head>
+        <title>Quote Database - Submitted by {{submitter}}</title>
+    </head>
+    <style type="text/css">
+        
+        body {
+            font-family: sans-serif;
+            width: 800px;
+            margin: 0 auto;
+            padding: 10 px;
+            }
+        hr {
+            margin: 20px auto;
+            }
+        .content+.content {
+            margin-top: 20px;
+            }
+        .content-subject {
+            font-weight: bold;
+            font-size: 20px;
+            }
+        .content-body {
+            margin 0;
+            font-size 17px;
+            }
+        pre {white-space: pre-wrap;}
+    </style>
+
+    
+    <body>
+        <div class="content">
+            <div class="content-subject">
+            <a href="/{{DBQuote.quote_id}}" class="post-title">#{{DBQuote.quote_id}}</a></div>
+            <a title='Vote down'href="/d/{{DBQuote.quote_id}}">[-]</a>
+            &nbsp;{{DBQuote.score}}
+            &nbsp;<a title='Vote up' href="/u/{{DBQuote.quote_id}}">[+]</a>
+            &nbsp;<a title='Flag for deletion'href="/flag/{{DBQuote.quote_id}}">[X]</a>
+            <br>
+            <pre class="content-body">{{DBQuote.quote}}</pre>
+            {% if DBQuote.imgurl %}
+            <img src={{DBQuote.imgurl}} WIDTHMAX=800 HEIGHTMAX=800 >
+            <br>
+            {% endif %}
+            <i><pre class='content-body'>Submitted by {{DBQuote.submitter_id}} on {{DBQuote.Time}}</pre></i>
+            <hr>
+        </div>
+    <body>
+</html>
+

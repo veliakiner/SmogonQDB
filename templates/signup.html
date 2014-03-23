@@ -1,0 +1,56 @@
+<!DOCTYPE = html>
+
+<html>
+    <head>
+        <title>Sign up page!.</title>
+    </head>
+    <style>
+        .error{
+                font-weight: bold;
+                color: red;
+                }
+        body {
+            font-family: sans-serif;
+            width: 800px;
+            margin: 0 auto;
+            padding: 10 px;
+            }
+        textarea {
+                width: 400px;
+                height: 200px;
+                font-size: 17px;
+                font-family: monospace;
+                }
+        input[type=submit] {
+            font-size: 24px;
+            }
+    </style>
+    <body>
+        <h1 class="title">Step right up, sign up here.</h1>
+        <form method="post">
+            <label>
+                <div class="error">{{er1}}</div>
+                <input type="text" name="username" value="{{username}}">
+                Username<br>
+            </label>
+            <label>
+                <div class="error">{{er2}}</div>
+                <input type="password" name="password" value="{{password}}">
+                Password<br>
+            </label>
+            <label>
+                <div class="error">{{er3}}</div>
+                <input type="password" name="verify" value="{{verify}}">
+                Verify<br>
+            </label>
+            <label>
+                <div class="error">{{er4}}</div>
+                <input type="text" name="email" value="{{email}}">
+                Email (optional)
+            </label><br>
+
+            <br>
+            <div class="error">{{error}}</div>
+            <input type="submit">
+        </form>
+</html>

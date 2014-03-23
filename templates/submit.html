@@ -1,0 +1,51 @@
+<!DOCTYPE = html>
+
+<html>
+    <head>
+        <title>QDB Submission</title>
+    </head>
+    <style>
+        .error{
+                font-weight: bold;
+                color: red;
+                }
+        body {
+            font-family: sans-serif;
+            width: 800px;
+            margin: 0 auto;
+            padding: 10 px;
+            }
+        textarea {
+                width: 400px;
+                height: 200px;
+                font-size: 17px;
+                font-family: monospace;
+                }
+        input[type=submit] {
+            font-size: 24px;
+            }
+    </style>
+    <body>
+        <h1>Submit a quote</h1>
+        <hr>
+    <a href='/'>Return main page</a>
+        <hr>
+        <form method="post">
+            <label>
+                <div>Submitter:</div>
+                <input type="text" name="submitter_id" value="{{submitter_id}}">
+            </label>
+            
+            <label>
+                <div><b>Quote:</b></div>
+                <textarea name="quote">{{quote}}</textarea>
+            </label>
+            <label>
+                <div>Image (optional)</div>
+                <input type="text" name="imgurl" value={{imgurl}}>
+            </label>
+            <br>
+            <div class="error">{{error}}</div>
+            <input type="submit">
+        </form>
+</html>
