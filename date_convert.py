@@ -9,6 +9,7 @@ def date_convert(date):
     data=date.split('-') #year/month/day+time all separated by dash
     daydate=data[-1].split() #data[-1] is day+time, separated by a space
     day=daydate[0] #discard time, keep day
+    day=day if day[0]!=0 else day[1] #otherwise single-digit days retain leading zero
     year=str(data[0]) #data is list containing the year and the month
     month=str(data[1])
     #map month numbers to their names
